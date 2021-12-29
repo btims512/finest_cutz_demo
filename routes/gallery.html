@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8" />
+
+    <title>Finest Cutz</title>
+    <link rel="stylesheet" type="text/css" href="styles.css" />
+  </head>
+  <body>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      body {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        min-height: 100vh;
+        background: #000;
+      }
+
+      .box {
+        position: relative;
+        width: 200px;
+        height: 200px;
+        transform-style: preserve-3d;
+        animation: animate 20s linear infinite;
+      }
+
+      @keyframes animate {
+        0% {
+          transform: perspective(1000px) rotateX(0deg) rotateY(35deg);
+        }
+        100% {
+          transform: perspective(1000px) rotateX(360deg) rotateY(35deg);
+        }
+      }
+
+      .box span {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        transform-origin: center;
+        transform-style: preserve-3d;
+        transform: rotateX(calc(var(--i) * 45deg)) translateZ(300px);
+      }
+
+      .box span img {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+
+      .menu {
+        list-style: none;
+        display: flex;
+        flex-direction: row;
+        gap: 77px;
+        align-items: center;
+        margin-inline: -370px;
+      }
+      .box {
+        position: relative;
+        width: 241px;
+        margin-top: 298px;
+        height: 204px;
+        transform-style: preserve-3d;
+        animation: animate 20s linear infinite;
+      }
+
+      .btn-1 {
+        background: #d59f48;
+        font-weight: 100;
+        margin-left: 465px;
+      }
+    </style>
+
+    <header>
+      <nav class="navbar">
+        <label class="menubtn" for="checkbox"
+          ><i class="im im-menu-dot-h"></i
+        ></label>
+        <input id="checkbox" type="checkbox" />
+        <ul class="menu">
+          <li><a href="/">Home</a></li>
+          <li><a href="/gallery">Gallery</a></li>
+          <img
+            src="https://i.imgur.com/GjGRv5s.png"
+            alt="logo"
+            style="width: 139px"
+          />
+          <li><a href="/services">Services</a></li>
+          <li><a href="/contact">Contact</a></li>
+        </ul>
+        <div class="btn-container">
+          <a href="/book" class="btn btn-1">
+            <!-- <svg>
+          <rect x="0" y="0" fill="none" width="100%" height="100%" />
+        </svg> -->
+            BOOK NOW
+          </a>
+        </div>
+      </nav>
+    </header>
+    <body>
+      <div class="box">
+        <span style="--i: 1"
+          ><img
+            src="https://images.unsplash.com/photo-1534119768988-c496213eff76?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1180&q=80"
+        /></span>
+        <span style="--i: 2"
+          ><img
+            src="https://images.unsplash.com/photo-1575880918403-f578c9078302?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1180&q=80"
+        /></span>
+        <span style="--i: 3"
+          ><img
+            src="https://images.unsplash.com/photo-1523983254932-c7e6571c9d60?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1204&q=80"
+        /></span>
+        <span style="--i: 4"
+          ><img
+            src="https://images.unsplash.com/photo-1519699047748-de8e457a634e?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1180&q=80"
+        /></span>
+        <span style="--i: 5"
+          ><img
+            src="https://images.unsplash.com/photo-1489667897015-bf7a9e45c284?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1187&q=80"
+        /></span>
+        <span style="--i: 6"
+          ><img
+            src="https://images.unsplash.com/photo-1526382925646-27b5eb86796e?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1180&q=80"
+        /></span>
+        <span style="--i: 7"
+          ><img
+            src="https://images.unsplash.com/photo-1534607287018-541c7d97748f?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1450&q=80"
+        /></span>
+        <span style="--i: 8"
+          ><img
+            src="https://images.unsplash.com/photo-1499651681375-8afc5a4db253?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1594&q=80"
+        /></span>
+      </div>
+    </body>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.6.1/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.6.1/ScrollTrigger.min.js"></script>
+
+    <script>
+      gsap.registerPlugin(ScrollTrigger);
+
+      gsap.to(".navbar", {
+        scrollTrigger: {
+          trigger: ".two",
+          endTrigger: ".one",
+          scrub: true,
+          toggleActions: "restart none none none",
+          start: "bottom bottom",
+        },
+        snap: 0,
+        backgroundColor: "black",
+      });
+    </script>
+  </body>
+</html>
